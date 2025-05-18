@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        div > p{
+            color: yellow;
+            background-color: green;
+            /* div p-jitne pe para inside div have this properties */
+            /* div li p-only under div under li p will be affected  */
+            /* div>p-direct child to div */
+        }
+        div + p{
+            color: aliceblue;
+            background-color: rgb(255, 126, 126);
+            /* div+p-jiska p ka pichla sibling div hai   */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>This is another para inside li</p></li>
+                <!-- this p has a direct parent li but still affected if div p is used -->
+                <li>this will not get affected</li>
+            </ul>
+           <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+        <!-- iska bhi pichla sibling div hai after div ye p -->
+    </div>
+    <p>This is outermost paragraph</p>
+    <!-- iska pichla sibling div hai like body ke baad div fir ye p -->
+</body>
+</html>

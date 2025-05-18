@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 12px;
+            /* border: 2px solid red; */
+            margin: 4px 10px;
+            background-color: burlywood;
+            /* box-shadow: 5px 3px green; */
+            /* xoffset yoffset color like shadow to a box*/
+            /* box-shadow: 7px 5px 10px 34px rgba(51, 101, 202, 0.5); */
+            /* rgba a==alpha responsible for darkness of color */
+            /* 10px- blur radius increases it spreads the color and vanish */
+            /* 34px-spread radius spreadness of shadow*/
+            box-shadow:  3px 5px 10px green;
+            /* inset shadow inside the box */
+           
+        }
+        h2{
+            text-shadow: 3px 4px 2px red;
+            /* xoffest yoffset blurness color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1-This is c++course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis modi voluptatem impedit quidem expedita nemo doloremque 
+                pariatur facilis ad consectetur at quis ut, alias animi dolore quasi repellat incidunt praesentium ullam perspiciatis 
+                quam optio!</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2-This is HTML course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis modi voluptatem impedit quidem expedita nemo doloremque 
+                pariatur facilis ad consectetur at quis ut, alias animi dolore quasi repellat incidunt praesentium ullam perspiciatis 
+                quam optio!</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis modi voluptatem impedit quidem expedita nemo doloremque 
+                pariatur facilis ad consectetur at quis ut, alias animi dolore quasi repellat incidunt praesentium ullam perspiciatis 
+                quam optio!</p>
+        </div>
+    </div>
+</body>
+</html>

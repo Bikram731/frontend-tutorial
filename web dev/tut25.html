@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* postion -static relative fixed sticky absolute */
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height: 100000px;
+        }
+        .box{
+            border: 3px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+        }
+        #box3{
+            /* relative -relative to its original position and leave a gap*/
+            /* absolute-relative to its parent like container */
+            position: absolute;
+            top: 20px;
+            left: 100px;
+        }
+        #box2{
+            /* will remain fixed on page*/
+            position: fixed;
+            right: 4px;
+            bottom: 2px;
+        }
+        #box1{
+            /* sticky- gets stick to browser even if u scroll */
+            position: sticky;
+            top: 3px;
+
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="container">
+        <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+    </div>
+
+</body>
+</html>

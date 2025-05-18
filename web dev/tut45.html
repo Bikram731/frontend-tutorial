@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Media queries</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-areas:
+        ' navbar navbar navbar navbar'
+          'section section section aside' 
+          'footer footer footer footer';
+        }
+        
+        @media only screen and (max-width:300px) {
+            body{
+                background-color: red;
+        
+            }
+            .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            grid-template-areas:
+        ' navbar navbar navbar navbar'
+          'section section section section'
+          'aside aside aside aside' 
+          'footer footer footer footer';
+        }
+        }
+       @media only screen and (max-width:500px) and (min-width:300px){
+        body{
+             
+            background-color: blue;
+        }
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-areas:
+        ' navbar navbar navbar navbar'
+          'section section section section'
+          'aside aside aside aside' 
+          'footer footer footer footer';
+        }
+        aside{
+            display: none;
+            /* gayab with leaving space */
+        }
+        span{
+            display: block;
+        }
+       }
+       @media only screen and (max-width:800px) and (min-width:500px){
+        body{
+            background-color: yellow;
+        }
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-areas:
+        ' navbar navbar navbar navbar'
+          'section section section section'
+          'aside aside aside aside' 
+          'footer footer footer footer';
+        }
+       }
+       @media only screen and (min-width:800px){
+        body{
+            background-color: green;
+        }
+        span{
+            display: block;
+        }
+       }
+       nav{
+            grid-area: navbar;
+        }
+        section{
+             grid-area: section;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+            text-align: center;
+        }
+       .bdr{
+        border: 2px solid black;
+        padding :23px;
+        background-color: wheat;
+
+       }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <nav class="bdr" >
+        <span>Home</span>
+        <span>About</span>
+        <span>Services</span>
+        <span>Contact Us</span>
+        <!-- Home About Service Contact Us -->
+    </nav>
+    <section class="bdr">
+      <h2 >Learn CSS in hindi</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero eum ipsum, quas, voluptatem a maiores voluptatibus tempora 
+        perspiciatis saepe aliquid placeat omnis nisi commodi asperiores! Aut nam impedit dolorum voluptas quis, laboriosam, ratione 
+        accusamus id commodi soluta aliquid perspiciatis sit delectus tenetur dolores laudantium sapiente quas cupiditate nobis dolor
+         quia. Maxime a recusandae maiores doloribus eveniet eum nam laudantium esse culpa deleniti? Reiciendis numquam incidunt 
+         inventore ut autem, minima totam id odit? Optio nesciunt dolore asperiores commodi earum itaque eveniet, iure quas laboriosam
+          expedita pariatur quos. Ipsa earum pariatur illum ducimus perspiciatis! Aperiam minima adipisci laborum voluptatum vero pari
+          atur similique modi accusantium nihil ex est distinctio deserunt necessitatibus sequi fuga fugit iusto ut, nam consequatur 
+          reiciendis, aliquid corrupti sapiente. Voluptatibus, nesciunt autem!</p>
+    </section>
+    <aside class="bdr">
+        <h1>More about us</h1>
+    </aside>
+   </div>
+   <footer class="bdr">Copright codewithHarry 2024</footer>
+   
+</body>
+</html>

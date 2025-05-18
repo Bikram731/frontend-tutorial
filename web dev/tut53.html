@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container red bggreen">
+        <div class="box" style="display: flex">
+            hey i am a box
+        </div>
+        <script>
+            // let div=document.createElement("div");
+            // div.setAttribute("class","created");
+            // div.innerHTML=("i am div");
+            // document.querySelector(".container").append(div);
+            // document.querySelector(".container").before(div);
+            // document.querySelector(".container").prepend(div);
+              let cont=document.querySelector(".container");
+              cont.insertAdjacentHTML("afterbegin","<b>i am underwater</b>");
+            //   afterend will insert as an html element after container 
+            // beforebegin will insert as an afterend but before container
+            // beforeend 
+            // document.querySelector(".container").classList->container red bggreen,classname gives only names
+            // document.querySelector(".container").classList.add("biki")->adds the class biki,.remove also
+            // document.querySelector(".container").classList.toggle("classname")-> if class is present it will remove or give false again done then true 
+        </script>
+    </div>
+</body>
+</html>

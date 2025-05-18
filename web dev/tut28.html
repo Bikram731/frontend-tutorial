@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            height: 477px;
+            width: 99%;
+            border: 2px solid grey;
+            display: flex;
+            /* for flex properties write display flex first */
+            flex-direction: row;
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            box will be from row end
+            flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            /* it can wrap up to next line if width decreases */
+            flex-flow: row wrap;
+            /* flex flow-can write for both direction and wrap */
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly; 
+            /* space is divided evenly even from front and end between boxes */
+            /* justify-content: space-around; */
+            /* every box has equal space for itself in left and right */
+            align-items: center;
+            /* vertically aligned or (flex end at bottom) */
+            align-items: stretch;
+            /* boxes stretch by evenly spacing  */
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid yellowgreen;
+            margin: 5px;
+            padding: 2px;
+            
+        }
+        #item-1{
+            /* order: 2; */
+            flex-grow: 3;
+        }
+        #item-2{
+            flex-grow: 3;
+             /* flex-shrink: 2; */
+             /* flex-basis: 320px; */
+             /* when flex direction is row it controls width else in column it controls height */
+            order:3;
+        }
+        #item-3{
+            flex-grow: 3;
+            flex: 2 3 100px;
+            align-self: flex-end;
+            /* flex start flex end flex center used to align box */
+            /* flex grow flex shrink flex basis */
+        } 
+
+        /* order more later it shows then */
+        /* flex grow higher more it grows on width change no negative number flex shrink for it */
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+    </div>
+    
+</body>
+</html>

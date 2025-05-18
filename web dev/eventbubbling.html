@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            background-color: aqua;
+            border: 2px solid black;
+            margin: 14px;
+            padding : 15px;
+        }
+        .childContainer{
+            background-color: azure;
+            margin: 14px;
+            padding : 15px;
+        }
+        .container{
+            background-color: yellow;
+            margin: 14px;
+            padding : 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am a child
+            </section>
+        </span>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            // to stop bubbling
+            alert("child was clicked");
+        })
+        document.querySelector(".childContainer").addEventListener("click",()=>{
+            alert("childcontainer was clicked");
+        })
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("container was clicked");
+        })
+        // event bubbling->as i clicked on child alert was shown on childcontainer and container as well as they are inside 
+        // if u listen any event on ur element then its parent listener will also be activated
+        // removeEventListener also is there
+        function ger(){
+    let val1=Math.ceil(Math.random()*255);
+    let val2=Math.ceil(Math.random()*255);
+    let val3=Math.ceil(Math.random()*255);
+    return `rgb(${val1},${val2},${val3})`;
+}
+        let a=setInterval(()=>{
+            document.querySelector(".childContainer").style.backgroundColor= ger();
+        },3000)
+        // after every 3000 ms random will color will be there
+        // clearinterval(a) will stop the color
+        // settimeout for only some time
+    </script>
+</body>
+</html>

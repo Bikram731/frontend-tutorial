@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/gls8byw.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "alumni-sans-collegiate-one", sans-serif;
+            font-weight: 400;
+           font-style: italic;
+           
+        }
+        .container{
+            width: 900px;
+            background-color: rgb(190, 251, 61);
+            border: 10px solid red;
+            margin: auto;
+        }
+        .item{
+            background-color: chartreuse;
+            border:3px solid rgb(104, 50, 192);
+            padding: 20px 50px 20px 15px;
+            margin: 20px 50px 20px 15px;
+        }
+        #fruits{
+            float: left;
+            /* float to left */
+            width: 50%;
+        }
+        #computer{
+            float: left;
+            width: 50%;
+        } 
+        #stationary{
+            clear: left;
+            /* to not overlap paras */
+            /* float: left; */
+            width: 80%;
+        } 
+        p, h3{
+               text-align: center;
+               text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to my store</h1>
+        <div id="fruits" class="item">
+            <h3>fruits</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Inventore, eum culpa praesentium quaerat repudiandae expedita a consequatur quas libero porro. </p>
+        </div>
+        <div id="computer" class="item">
+            <h3>fruits</h3>
+            <p id="computerpara" class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nesciunt atque
+                 repudiandae voluptatum eius, saepe aliquid nemo corporis
+                 voluptas laborum vitae, expedita ratione magni provident quidem aspernatur! Beatae, est voluptates? </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>fruits</h3>
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Natus, quibusdam laboriosam. Quae deleniti eligendi quaerat fugit. A facilis aperiam quisquam. </p>
+        </div>
+    </div>
+</body>
+</html>
